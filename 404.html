@@ -1,0 +1,9 @@
+<script>
+const oldPrefix = "/testingprefix/";
+const newBase = "https://birdeehub.github.io/nix-wrapper-modules/";
+
+if (window.location.pathname.startsWith(oldPrefix)) {
+    const rest = window.location.pathname.slice(oldPrefix.length);
+    window.location.replace(newBase + rest + window.location.search + window.location.hash);
+}
+</script>
